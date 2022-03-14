@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import 'config';
+@import 'search';
+@import 'user-stats';
+@import 'user-info';
+@import 'followers';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: $primary-clr;
+    color: $black;
+    line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+}
+
+p {
+    line-height: 1.5;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+svg {
+    display: block;
+}
+
+input {
+    background-color: $white;
+    color: $black;
+    font-size: 1rem;
+}
+
+button {
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid $green;
+    border-radius: $radius-2;
+    background-color: transparent;
+    color: $green;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    transition: $ease-trans;
+    &:hover {
+        background-color: $green;
+        color: $white;
+    }
+}
+
+.text-link {
+    color: $primary-clr-2;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.main {
+    padding: 4rem 0;
+    &-center {
+        max-width: 1200px;
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+.two-column-template {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}

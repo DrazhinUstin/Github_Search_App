@@ -1,0 +1,37 @@
+.user-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    margin: 2rem 0;
+    article {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2rem;
+        align-items: center;
+        padding: 1.5rem;
+        border-radius: $radius;
+        background-color: $white;
+        & > span {
+            width: 2.5rem;
+            height: 2.5rem;
+            @extend %flex-center;
+            border-radius: 50%;
+            background-color: $green;
+            color: $white;
+            font-size: 1.5rem;
+        }
+        &:nth-child(2) > span {
+            background-color: $primary-clr-2;
+        }
+        &:nth-child(3) > span {
+            background-color: $red;
+        }
+        &:nth-child(4) > span {
+            background-color: $primary-clr-3;
+        }
+        p {
+            color: $grey;
+            text-transform: capitalize;
+        }
+    }
+}
