@@ -3,6 +3,7 @@ import { useAppContext } from '../context';
 
 const Followers = () => {
     const { followers } = useAppContext();
+    if (!followers.length) return null;
     return (
         <section className='followers'>
             <div>

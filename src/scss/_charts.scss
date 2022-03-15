@@ -1,0 +1,9 @@
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    svg {
+        width: 100% !important;
+        border-radius: $radius;
+    }
+}
