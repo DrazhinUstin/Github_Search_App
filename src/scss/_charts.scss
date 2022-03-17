@@ -2,6 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+    @include for-size(large) {
+        grid-template-columns: unset;
+    }
     svg {
         width: 100% !important;
         border-radius: $radius;

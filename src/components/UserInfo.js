@@ -16,7 +16,7 @@ const UserInfo = () => {
                         <span>{login}</span>
                     </div>
                 </div>
-                <a href={html_url} target='_blank' rel='noopener noreferrer' className='btn'>
+                <a href={html_url} target='_blank' rel='noopener noreferrer' className='round-btn'>
                     view
                 </a>
             </header>

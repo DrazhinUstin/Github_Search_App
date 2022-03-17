@@ -4,6 +4,9 @@
     grid-template-columns: 1fr auto;
     grid-gap: 2rem;
     align-items: center;
+    @include for-size(medium) {
+        grid-template-columns: unset;
+    }
     &-msg {
         position: absolute;
         top: -100%;
@@ -35,10 +38,7 @@
         }
         button {
             flex-shrink: 0;
-            height: 2rem;
             padding: 0 1.5rem;
-            border: none;
-            border-radius: $radius-2;
             background-color: $green;
             color: $white;
             svg {

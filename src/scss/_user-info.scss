@@ -19,6 +19,12 @@
     &-header {
         @extend %flex-between;
         margin-bottom: 1rem;
+        @include for-size(large) {
+            display: block;
+            & > div {
+                margin-bottom: 1rem;
+            }
+        }
         & > div {
             display: flex;
             align-items: center;

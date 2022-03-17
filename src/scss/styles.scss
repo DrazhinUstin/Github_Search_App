@@ -5,6 +5,7 @@
 @import 'user-info';
 @import 'followers';
 @import 'charts';
+@import 'page-404';
 
 * {
     margin: 0;
@@ -59,7 +60,25 @@ button {
 
 .btn {
     display: inline-block;
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: $radius;
+    background-color: $green;
+    color: $white;
+    box-shadow: $shadow;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    transition: $ease-trans;
+    &:hover {
+        background-color: $primary-clr-2;
+    }
+}
+
+.round-btn {
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.75rem;
     border: 1px solid $green;
     border-radius: $radius-2;
     background-color: transparent;
@@ -89,8 +108,19 @@ button {
     }
 }
 
-.two-column-template {
+.cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+    margin: 4rem 0 2rem;
+    @include for-size(medium) {
+        grid-template-columns: unset;
+        grid-gap: 4rem;
+    }
+}
+
+.loading-img {
+    width: 16rem;
+    height: 16rem;
+    margin: 0 auto;
 }

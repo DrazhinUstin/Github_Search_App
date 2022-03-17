@@ -21,7 +21,7 @@ const Search = () => {
             {error.show && <p className='search-msg'>{error.msg}</p>}
             <form className='search-form' onSubmit={handleSubmit}>
                 <input type='text' placeholder='Enter github user' ref={inputRef} />
-                <button type='submit'>
+                <button type='submit' className='round-btn'>
                     <FaSearch />
                 </button>
             </form>
