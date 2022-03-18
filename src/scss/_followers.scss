@@ -1,19 +1,8 @@
-.followers {
-    position: relative;
-    border-radius: $radius;
-    border-top-left-radius: 0;
-    background-color: $white;
+.followers,
+.following {
     &::before {
         content: 'followers';
-        position: absolute;
-        top: -2rem;
-        left: 0;
-        padding: 0.5rem 1rem;
-        border-radius: $radius $radius 0 0;
         background-color: $primary-clr-2;
-        color: $white;
-        text-transform: capitalize;
-        letter-spacing: $spacing;
     }
     & > div {
         height: 16rem;
@@ -37,5 +26,12 @@
         h4 {
             margin-bottom: 0.5rem;
         }
+    }
+}
+
+.following {
+    &::before {
+        content: 'following';
+        background-color: $red;
     }
 }

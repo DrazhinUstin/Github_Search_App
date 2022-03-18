@@ -1,0 +1,26 @@
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem 2rem;
+    margin: 4rem 0 2rem;
+    @include for-size(medium) {
+        grid-template-columns: unset;
+        grid-gap: 4rem;
+    }
+    & > section {
+        position: relative;
+        border-radius: $radius;
+        border-top-left-radius: 0;
+        background-color: $white;
+        &::before {
+            position: absolute;
+            top: -2rem;
+            left: 0;
+            padding: 0.5rem 1rem;
+            border-radius: $radius $radius 0 0;
+            color: $white;
+            text-transform: capitalize;
+            letter-spacing: $spacing;
+        }
+    }
+}

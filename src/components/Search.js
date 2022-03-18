@@ -4,12 +4,12 @@ import { useAppContext } from '../context';
 
 const Search = () => {
     const inputRef = useRef(null);
-    const { getGithubData, requests, error } = useAppContext();
+    const { getGithubData, isLoading, error, requests } = useAppContext();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const value = inputRef.current.value;
-        if (!value.trim()) {
+        if (!value.trim() || isLoading) {
             inputRef.current.focus();
         } else {
             getGithubData(value);

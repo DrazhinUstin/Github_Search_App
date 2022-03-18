@@ -1,20 +1,8 @@
 .user-info {
-    position: relative;
     padding: 1.5rem;
-    border-radius: $radius;
-    border-top-left-radius: 0;
-    background-color: $white;
     &::before {
         content: 'github user';
-        position: absolute;
-        top: -2rem;
-        left: 0;
-        padding: 0.5rem 1rem;
-        border-radius: $radius $radius 0 0;
         background-color: $green;
-        color: $white;
-        text-transform: capitalize;
-        letter-spacing: $spacing;
     }
     &-header {
         @extend %flex-between;

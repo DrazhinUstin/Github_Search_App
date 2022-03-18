@@ -5,6 +5,7 @@ import Search from '../components/Search';
 import UserStats from '../components/UserStats';
 import UserInfo from '../components/UserInfo';
 import Followers from '../components/Followers';
+import Gists from '../components/Gists';
 import Repos from '../components/Repos';
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
             <div className='cards'>
                 <UserInfo />
                 <Followers />
+                <Gists />
             </div>
             <Repos />
         </main>

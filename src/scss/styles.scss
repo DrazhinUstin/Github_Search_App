@@ -2,8 +2,10 @@
 @import 'config';
 @import 'search';
 @import 'user-stats';
+@import 'cards';
 @import 'user-info';
 @import 'followers';
+@import 'gists';
 @import 'charts';
 @import 'page-404';
 
@@ -105,17 +107,6 @@ button {
         max-width: 1200px;
         width: 90vw;
         margin: 0 auto;
-    }
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-    margin: 4rem 0 2rem;
-    @include for-size(medium) {
-        grid-template-columns: unset;
-        grid-gap: 4rem;
     }
 }
 
