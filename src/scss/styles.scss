@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import 'config';
+@import 'navbar';
 @import 'search';
 @import 'user-stats';
 @import 'cards';
@@ -7,6 +8,7 @@
 @import 'followers';
 @import 'gists';
 @import 'charts';
+@import 'login';
 @import 'page-404';
 
 * {
@@ -110,8 +112,12 @@ button {
     }
 }
 
-.loading-img {
+.loading {
     width: 16rem;
     height: 16rem;
     margin: 0 auto;
+    &-overlay {
+        min-height: 100vh;
+        @extend %flex-center;
+    }
 }

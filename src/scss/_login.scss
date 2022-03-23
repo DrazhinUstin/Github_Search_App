@@ -1,0 +1,17 @@
+.login {
+    min-height: 100vh;
+    @extend %flex-center;
+    flex-flow: column wrap;
+    row-gap: 2rem;
+    text-align: center;
+    svg {
+        max-width: 40rem;
+    }
+    h1 {
+        color: $primary-clr-3;
+        font-size: 3rem;
+        @include for-size(small) {
+            font-size: 2rem;
+        }
+    }
+}
