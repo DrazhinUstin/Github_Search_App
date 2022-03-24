@@ -3,18 +3,17 @@
         content: 'gists';
         background-color: $primary-clr-3;
     }
-    & > div {
+    ul {
         height: 16rem;
         padding: 1.5rem;
         overflow-y: auto;
     }
-    article {
+    li {
         display: flex;
         align-items: center;
         column-gap: 1rem;
         padding: 0.5rem 0;
         border-bottom: 1px solid $light-grey;
-        word-break: break-all;
         &:first-child {
             padding: 0 0 0.5rem;
         }

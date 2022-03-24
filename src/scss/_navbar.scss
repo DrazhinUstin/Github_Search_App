@@ -19,7 +19,7 @@
         line-height: 1.25;
         text-transform: capitalize;
         letter-spacing: $spacing;
-        word-break: break-word;
+        overflow-wrap: anywhere;
     }
     .round-btn {
         flex-shrink: 0;

@@ -7,11 +7,12 @@
         grid-template-columns: unset;
         grid-gap: 4rem;
     }
-    & > section {
+    & > article {
         position: relative;
         border-radius: $radius;
         border-top-left-radius: 0;
         background-color: $white;
+        overflow-wrap: anywhere;
         &::before {
             position: absolute;
             top: -2rem;

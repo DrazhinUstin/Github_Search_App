@@ -6,12 +6,12 @@ const Gists = () => {
     const { gists } = useAppContext();
     if (!gists.length) return null;
     return (
-        <section className='gists'>
-            <div>
+        <article className='gists'>
+            <ul>
                 {gists.map((gist, index) => {
                     const { description, html_url } = gist;
                     return (
-                        <article key={index}>
+                        <li key={index}>
                             <span>
                                 <FaFileCode />
                             </span>
@@ -26,11 +26,11 @@ const Gists = () => {
                                     view files
                                 </a>
                             </div>
-                        </article>
+                        </li>
                     );
                 })}
-            </div>
-        </section>
+            </ul>
+        </article>
     );
 };
 

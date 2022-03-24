@@ -6,12 +6,12 @@ const Followers = () => {
     return [followers, following].map((item, index) => {
         if (!item.length) return null;
         return (
-            <section key={index} className={index === 0 ? 'followers' : 'following'}>
-                <div>
+            <article key={index} className={index === 0 ? 'followers' : 'following'}>
+                <ul>
                     {item.map((subItem, index) => {
                         const { avatar_url, html_url, login } = subItem;
                         return (
-                            <article key={index}>
+                            <li key={index}>
                                 <img src={avatar_url} alt={login} />
                                 <div>
                                     <h4>{login}</h4>
@@ -24,11 +24,11 @@ const Followers = () => {
                                         {html_url}
                                     </a>
                                 </div>
-                            </article>
+                            </li>
                         );
                     })}
-                </div>
-            </section>
+                </ul>
+            </article>
         );
     });
 };

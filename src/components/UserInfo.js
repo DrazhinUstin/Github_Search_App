@@ -7,7 +7,7 @@ const UserInfo = () => {
     if (!user) return null;
     const { avatar_url, html_url, name, login, bio, blog, company, location } = user;
     return (
-        <section className='user-info'>
+        <article className='user-info'>
             <header className='user-info-header'>
                 <div>
                     <img src={avatar_url} alt={name} />
@@ -48,7 +48,7 @@ const UserInfo = () => {
                     </li>
                 )}
             </ul>
-        </section>
+        </article>
     );
 };
 

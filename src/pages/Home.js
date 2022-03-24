@@ -28,11 +28,11 @@ const Home = () => {
             <main className='main main-center'>
                 <Search />
                 <UserStats />
-                <div className='cards'>
+                <section className='cards'>
                     <UserInfo />
                     <Followers />
                     <Gists />
-                </div>
+                </section>
                 <Repos />
             </main>
         </>
