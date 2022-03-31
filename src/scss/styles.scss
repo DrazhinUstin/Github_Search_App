@@ -16,9 +16,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    &::selection {
+        background-color: $primary-clr-3;
+        color: $white;
+    }
 }
 
 body {
+    position: relative;
     min-height: 100vh;
     background-color: $primary-clr;
     color: $black;
@@ -100,6 +105,29 @@ button {
     color: $primary-clr-2;
     &:hover {
         text-decoration: underline;
+    }
+}
+
+.github-link {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    @extend %flex-center;
+    column-gap: 0.5rem;
+    color: $primary-clr-3;
+    opacity: 0.5;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    white-space: nowrap;
+    transition: $ease-trans;
+    svg {
+        font-size: 1.2rem;
+    }
+    &:hover {
+        opacity: 1;
     }
 }
 

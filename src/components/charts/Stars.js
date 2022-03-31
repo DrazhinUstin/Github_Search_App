@@ -15,9 +15,12 @@ const Stars = ({ repos }) => {
         return result;
     }, {});
 
-    stars = Object.keys(stars).map((item) => {
-        return { label: item, value: stars[item] };
-    });
+    stars = Object.keys(stars)
+        .map((item) => ({ label: item, value: stars[item] }))
+        .sort((a, b) => b.value - a.value)
+        .slice(0, 7);
+
+    if (!stars.length) return null;
 
     const chartConfigs = {
         type: 'doughnut3d',
@@ -32,9 +35,11 @@ const Stars = ({ repos }) => {
                 captionFontSize: '16',
                 labelFont: 'Open Sans, sans-serif',
                 labelFontColor: '#1a1818',
+                labelFontSize: '12',
                 smartLineColor: '#9d97b0',
                 legendItemFont: 'Open Sans, sans-serif',
                 legendItemFontColor: '#9d97b0',
+                legendItemFontSize: '12',
                 showPercentValues: '0',
                 decimals: '0',
                 theme: 'fusion',

@@ -8,8 +8,9 @@ const Search = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (isLoading) return;
         const value = inputRef.current.value;
-        if (!value.trim() || isLoading) {
+        if (!value.trim()) {
             inputRef.current.focus();
         } else {
             getGithubData(value);

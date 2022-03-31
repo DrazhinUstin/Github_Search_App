@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Page404 from './pages/Page404';
+import { Home, Login, Page404 } from './pages';
+import { GithubLink } from './components';
 import { ReactComponent as Loading } from './assets/loading.svg';
 
 const App = () => {
@@ -22,6 +21,7 @@ const App = () => {
                 <Route path='login' element={<Login />} />
                 <Route path='*' element={<Page404 />} />
             </Routes>
+            <GithubLink />
         </Router>
     );
 };

@@ -10,10 +10,15 @@ const MostPopular = ({ repos, colors }) => {
     const mostPopular = repos
         .sort((a, b) => b.stargazers_count - a.stargazers_count)
         .slice(0, 5)
-        .map((item, index) => {
-            if (!item.stargazers_count) return;
-            return { label: item.name, value: item.stargazers_count, color: colors[index] };
-        });
+        .reduce((result, item, index) => {
+            if (!item.stargazers_count) return result;
+            return [
+                ...result,
+                { label: item.name, value: item.stargazers_count, color: colors[index] },
+            ];
+        }, []);
+
+    if (!mostPopular.length) return null;
 
     const chartConfigs = {
         type: 'column3d',
@@ -32,6 +37,7 @@ const MostPopular = ({ repos, colors }) => {
                 yAxisNameFontColor: '#9d97b0',
                 yAxisNameFontSize: '16',
                 yAxisNameFontBold: '1',
+                yAxisValueFontSize: '12',
                 caption: 'Most Popular Repos',
                 captionFont: 'Open Sans, sans-serif',
                 captionFontColor: '#1a1818',

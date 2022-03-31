@@ -38,10 +38,10 @@ const AppProvider = ({ children }) => {
                 );
                 const [followersData, followingData, gistsData, reposData] = data;
                 setUser(userData);
-                setFollowers((oldstate) => followersData.value || oldstate);
-                setFollowing((oldstate) => followingData.value || oldstate);
-                setGists((oldstate) => gistsData.value || oldstate);
-                setRepos((oldstate) => reposData.value || oldstate);
+                setFollowers(followersData.value || []);
+                setFollowing(followingData.value || []);
+                setGists(gistsData.value || []);
+                setRepos(reposData.value || []);
                 setError({ show: false, msg: '' });
             }
             getRequets();
@@ -63,6 +63,7 @@ const AppProvider = ({ children }) => {
 
     useEffect(() => {
         getGithubData('john-smilga');
+        // eslint-disable-next-line
     }, []);
 
     return (

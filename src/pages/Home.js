@@ -1,13 +1,7 @@
 import React from 'react';
 import { useAppContext } from '../context';
 import { ReactComponent as Loading } from '../assets/loading.svg';
-import Navbar from '../components/Navbar';
-import Search from '../components/Search';
-import UserStats from '../components/UserStats';
-import UserInfo from '../components/UserInfo';
-import Followers from '../components/Followers';
-import Gists from '../components/Gists';
-import Repos from '../components/Repos';
+import { Navbar, Search, UserStats, UserInfo, Followers, Gists, Repos } from '../components';
 
 const Home = () => {
     const { isLoading } = useAppContext();

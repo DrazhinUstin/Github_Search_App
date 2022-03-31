@@ -1,9 +1,6 @@
 import React from 'react';
 import { useAppContext } from '../context';
-import Languages from './charts/Languages';
-import Stars from './charts/Stars';
-import MostPopular from './charts/MostPopular';
-import MostForked from './charts/MostForked';
+import { Languages, Stars, MostPopular, MostForked } from './charts';
 
 const Repos = () => {
     const colors = ['#6d71bc', '#3ec9c4', '#f3807d', '#ffca47', '#76d2f3'];
